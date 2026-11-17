@@ -41,8 +41,9 @@ pip install -r requirements.txt
 ## Status Atual
 
 - [x] Estrutura inicial do projeto criada
-- [ ] Fornecimento e auditoria do dataset `historical_data.csv`
-- [ ] Análise Exploratória de Dados (EDA)
-- [ ] Engenharia de atributos e pré-processamento
-- [ ] Treinamento e avaliação de modelos
-- [ ] Documentação final e aplicação
+- [x] Auditoria e preparação controlada do dataset `historical_data.csv`
+- [x] Análise Exploratória de Dados (EDA)
+- [x] Engenharia de atributos e validação temporal com embargo
+- [x] Treinamento, otimização, auditoria e avaliação final no teste
+- [x] Interpretabilidade, documentação consolidada ([RESULTADO.md](RESULTADO.md)) e relatórios
+- [ ] Aplicação de demonstração/inferência (`app/`)

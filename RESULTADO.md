@@ -6,7 +6,7 @@ Este documento resume, em ordem linear, todas as decisões metodológicas, os pr
 
 ## 1. Sumário: Como Ler e Entender Todo o Projeto
 
-Se você está abrindo este repositório pela primeira vez, siga esta ordem de leitura:
+Ordem recomendada de leitura para compreender o pipeline completo do projeto:
 
 ### Visão Geral e Código Reutilizável (`src/`)
 1. [README.md](README.md) — Objetivo, estrutura de diretórios e configuração do ambiente.
@@ -98,3 +98,17 @@ Testadas separadamente na Etapa 06.1 com `HGB (absolute_error, early_stopping='a
 3. **Outliers e qualidade de dados:** Presença de `3` registros `> 24h` no dataset (um deles em `2014-10-19`, com `~98,6 dias`), `800` casos de `max_item_price < min_item_price` e agrupamento de fechamentos próximos às `07:00` UTC em `2015-02-12`.
 4. **Fuso horário e janela curta:** Dados concentrados em ~1 mês (`2015-01-21` a `2015-02-18`) em provável horário UTC, sem mapeamento de fuso local por mercado.
 5. **Próximos passos para uma v2:** Confirmar disponibilidade em tempo real das razões operacionais e `driving_duration`, adicionar *target encoding* temporal causal por `store_id` e avaliar modelagem quantílica (ex.: P50 e P90).
+
+
+## Uso de ferramentas de IA
+
+Ferramentas de inteligência artificial foram utilizadas como recursos de apoio ao longo do desenvolvimento deste projeto, principalmente nas seguintes atividades:
+
+- **Pesquisa técnica:** exploração de abordagens de modelagem, estratégias de validação e técnicas de aprendizado de máquina.
+- **Auxílio na implementação:** apoio na escrita, revisão e depuração de código.
+- **Análise de dados:** discussão dos resultados exploratórios, investigação de anomalias e avaliação de possíveis explicações para os padrões identificados.
+- **Documentação:** revisão dos textos técnicos e organização da documentação do projeto.
+
+As sugestões e implementações geradas com auxílio de IA foram submetidas à análise crítica e à validação. As decisões metodológicas, verificações de integridade dos dados, avaliações dos modelos e resultados finais foram examinados com base na execução real dos experimentos.
+
+As ferramentas de IA contribuíram para o processo de desenvolvimento, mas não substituíram a análise crítica, o julgamento técnico ou a validação experimental.

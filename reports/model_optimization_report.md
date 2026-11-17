@@ -101,4 +101,4 @@
 ## 5. Recomendação para Avaliação Final
 
 - **Modelo conservador recomendado:** **`HistGradientBoostingRegressor(loss="absolute_error")`** com as `21` features confirmadas (`MAE = 12,17 min`, `RMSE = 18,06 min`, `MedAE = 9,08 min`, `R² = +0,0338`, `9,84 s` de treino), por ser robusto aos outliers extremos sem exigir exclusão manual de registros e por superar consistentemente o baseline e a perda quadrática.
-- **Candidato experimental para comparação controlada no teste (somente se aprovado):** `HistGradientBoostingRegressor(loss="absolute_error")` com `+ Razões Operacionais`, mantendo os resultados reportados separadamente do modelo conservador.
+- **Candidato experimental para comparação controlada (caso avaliado separadamente):** `HistGradientBoostingRegressor(loss="absolute_error")` com `+ Razões Operacionais`, mantendo os resultados reportados separadamente do modelo conservador.

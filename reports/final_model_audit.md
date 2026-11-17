@@ -99,4 +99,4 @@ Os dois experimentos com `RandomForestRegressor` da Etapa 06.1 **não são diret
 ### Justificativa e Pendências para Avaliação Final
 - **Justificativa:** Única configuração conservadora que supera o baseline em MAE (`12,11` vs `12,82 min`), RMSE (`17,92` vs `18,68 min`), P90_AE (`24,72` vs `25,67 min`) e R² (`+0,0480` vs `-0,0341`), sem remover outliers do treino e sem depender de divisão aleatória interna no `early_stopping`.
 - **Pendências documentadas:** (1) Uso de `store_id` via *target encoding* temporal causal fica para iteração futura; (2) Confirmar com engenharia/produto a disponibilidade em tempo real das razões operacionais e `driving_duration` antes de eventual promoção.
-- **Autorização:** A configuração está congelada e pronta para a **Etapa 07 (Avaliação Final no Conjunto de Teste)** mediante sua autorização.
+- **Próximo passo:** A configuração está congelada e pronta para a **Etapa 07 (Avaliação Final no Conjunto de Teste)**.
