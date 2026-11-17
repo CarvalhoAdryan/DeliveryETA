@@ -1,0 +1,119 @@
+{
+  "executed_at": "2026-11-17T16:25:20",
+  "library_versions": {
+    "python": "3.12.3",
+    "pandas": "2.3.1",
+    "numpy": "2.3.2",
+    "scikit_learn": "1.8.0",
+    "scipy": "1.17.1",
+    "joblib": "1.5.3",
+    "matplotlib": "3.10.6",
+    "seaborn": "0.13.2"
+  },
+  "split_sizes": {
+    "train": 138572,
+    "val": 28808,
+    "test": 30041
+  },
+  "frozen_model": "HistGradientBoostingRegressor",
+  "frozen_params": {
+    "loss": "absolute_error",
+    "learning_rate": 0.08,
+    "max_iter": 20,
+    "max_leaf_nodes": 63,
+    "min_samples_leaf": 30,
+    "l2_regularization": 0.0,
+    "early_stopping": false,
+    "random_state": 42
+  },
+  "features": [
+    "market_id",
+    "store_primary_category",
+    "order_protocol",
+    "total_items",
+    "subtotal",
+    "num_distinct_items",
+    "min_item_price",
+    "max_item_price",
+    "estimated_order_place_duration",
+    "created_hour",
+    "created_dayofweek",
+    "created_month",
+    "created_is_weekend",
+    "created_time_block",
+    "average_item_price",
+    "item_price_range",
+    "invalid_item_price_range",
+    "distinct_item_ratio",
+    "is_single_item",
+    "is_large_order",
+    "historical_store_order_count"
+  ],
+  "train_time_s": 4.12,
+  "test_infer_time_s": 0.124,
+  "validation_metrics": {
+    "baseline": {
+      "MAE": 12.8201,
+      "RMSE": 18.679,
+      "MedAE": 9.9,
+      "P90_AE": 25.6667,
+      "R2": -0.0341,
+      "Mean_Bias": -3.3927,
+      "Median_Bias": -0.6333
+    },
+    "frozen_hgb": {
+      "MAE": 12.1142,
+      "RMSE": 17.9219,
+      "MedAE": 9.2317,
+      "P90_AE": 24.7196,
+      "R2": 0.048,
+      "Mean_Bias": -2.8943,
+      "Median_Bias": -0.4005
+    }
+  },
+  "test_metrics": {
+    "baseline": {
+      "MAE": 14.1955,
+      "RMSE": 38.1036,
+      "MedAE": 10.4667,
+      "P90_AE": 29.0833,
+      "R2": -0.0195,
+      "Mean_Bias": -5.2643,
+      "Median_Bias": -1.45
+    },
+    "frozen_hgb": {
+      "MAE": 12.7797,
+      "RMSE": 37.1903,
+      "MedAE": 9.2282,
+      "P90_AE": 25.9125,
+      "R2": 0.0288,
+      "Mean_Bias": -4.6494,
+      "Median_Bias": -1.1213
+    }
+  },
+  "test_diff_vs_baseline": {
+    "MAE": {
+      "abs_diff": -1.4158,
+      "pct_diff": -9.97
+    },
+    "RMSE": {
+      "abs_diff": -0.9133,
+      "pct_diff": -2.4
+    },
+    "MedAE": {
+      "abs_diff": -1.2385,
+      "pct_diff": -11.83
+    },
+    "P90_AE": {
+      "abs_diff": -3.1708,
+      "pct_diff": -10.9
+    }
+  },
+  "test_error_counts": {
+    "negative_predictions": 0,
+    "abs_err_gt_30m": 2232,
+    "abs_err_gt_60m": 351,
+    "abs_err_gt_90m": 76,
+    "abs_err_gt_120m": 25
+  }
+}
